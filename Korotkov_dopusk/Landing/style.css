@@ -1,0 +1,274 @@
+@font-face
+{
+    font-family: 'Retro';
+    src: local('Retro'),
+    url('fonts/Retro.woff2') format('woff2'),
+    url('fonts/Retro.woff') format('woff'),
+    url('fonts/Retro.ttf') format('ttf'),
+    url('fonts/Retro.eot') format('eot');
+}
+
+*
+{
+    padding: 0px;
+    margin: 0px;
+}
+
+body
+{
+    font-family: 'Retro';
+}
+
+#shap
+{
+    display: flex;
+    justify-content: space-between;
+    background-color: #002a4a;
+}
+
+#logo
+{
+    padding-left: 30px;
+}
+
+#call
+{
+    display: flex;
+}
+
+#call > a, #call > p
+{
+    text-decoration: none;
+    color: #fff1ce;
+    padding: 22px 20px;
+}
+
+#call > p
+{
+    margin-left: 30px;
+}
+
+#info
+{
+    padding: 60px;
+    text-align: center;
+    background-color: #17607d;
+    color: #fff1ce;
+}
+
+main
+{
+  padding-top: 20px;
+  background-color: rgb(255, 146, 17);
+}
+
+.container_slider_css
+{
+    margin: auto;
+    width: 600px;
+    height: 400px;
+    position: relative;
+}
+
+.photo_slider_css
+{
+    position: absolute;
+    animation: round 12s infinite;
+    opacity: 0;
+    width: 100%;
+}
+
+img:nth-child(1){animation-delay:8s}
+img:nth-child(2){animation-delay:4s}
+img:nth-child(3){animation-delay:0s}
+
+@keyframes round
+{
+    25%{opacity:1}
+    50%{opacity:0}
+}
+
+.specific
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(214, 72, 0);
+    font-size: 20px;
+}
+
+.specific > .col1, .col2
+{
+    width: 80%;
+}
+
+.gg
+{
+    padding: 20px 13px;
+}
+
+.col1
+{
+  padding-top: 60px;
+  display: flex;
+}
+
+.col2 
+{
+  margin-top: 60px;
+  display: flex;
+}
+
+.tovar 
+{
+    display: flex; 
+    padding-top: 50px;
+    border-bottom: solid 2px rgb(214, 72, 0);
+}
+
+#kateg
+{
+    width: 25%;
+}
+
+ul{display:none}
+
+#tovar_block > input {display:none;}
+
+#n:checked ~ .tov_pic1, #n:checked ~ .tov_pic2, #n:checked ~ .tov_pic3{display: flex;}
+#n1:checked ~ .tov_pic1, #n2:checked ~ .tov_pic2, #n3:checked ~ .tov_pic3{display: flex;}
+#n1:checked ~ #gyr, #n2:checked ~ #sig, #n3:checked ~ #elec{display: block;}
+#n1:checked ~ #all, #n2:checked ~ #all, #n3:checked ~ #all{display: none;}
+
+#tovar_block
+{
+    width: 75%; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+}
+
+.tov_pic1, .tov_pic2, .tov_pic3
+{
+    display: none; 
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%; 
+    justify-content: space-around;
+    padding: 25px 0px;
+}
+
+#gyr, #sig, #elec {display:none}
+
+.tov_pic1 > div, .tov_pic2 > div, .tov_pic3 > div
+{
+    width: 400px;
+    text-align: center;
+    border: solid 2px rgb(214, 72, 0);
+}
+
+.pic_tov
+{
+    background-color: #17607d;
+    color:  rgb(214, 72, 0);
+    width: 100%;
+    height: 350px;
+}
+
+.info_tov
+{
+    background-color: #002a4a;
+    color:  rgb(214, 72, 0);
+    height: 100px;
+}
+
+
+
+
+.brends
+{
+    background-color: #fff1ce;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+.brends > #brend_info, #brend_pic
+{
+    width: 80%;
+}
+
+#brend_info
+{
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+#brend_pic, .info_pic
+{
+    padding: 50px 0px;
+    height: 400px;
+    border: solid 2px rgb(214, 72, 0);
+}
+
+#returned
+{
+    position: fixed;
+    bottom: 20px;
+    right: 20px; 
+    z-index: 100;
+}
+
+.polez_info
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px 0px;
+}
+
+.info_pic
+{
+    width: 600px;
+    background-color: #002a4a;
+    color:  #fff1ce;
+}
+
+.polez_info > .text, .email > h1
+{
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.email > h1
+{
+   padding-top: 40px;
+  
+}
+
+.email
+{
+    background-color: #fff1ce;
+}
+
+.rassilka {text-align: center; padding-bottom: 70px;}
+.rassilka > div > input 
+{
+    width: 250px; 
+    height: 50px;
+    margin: 15px 0px;
+}
+
+@media(min-width:0px) and (max-width:320px) 
+{
+.container_slider_css{width:80%;height:190px}
+}
+
+@media(min-width:321px) and (max-width:580px) 
+{
+.container_slider_css{width:80%;height:190px}
+}
+
