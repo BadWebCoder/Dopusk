@@ -1,0 +1,401 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,500;0,700;1,500&display=swap');
+
+* {margin: 0px; padding: 0px;}
+
+a {text-decoration: none;}
+
+#add, #add-info, #chgButton {color: rgb(1, 77, 1);}
+#del {color: rgb(143, 0, 0);}
+#bottom {margin-bottom: 10px;}
+
+html, body {height: 100%;}
+
+body 
+{
+    background-image:url(../pics/background.png);
+    background-attachment: fixed;
+    font-family: 'IBM Plex Mono', "Lucida Console", monospace;
+}
+
+#page {max-width: 2000px; margin: 0 auto;}
+
+header 
+{
+    background: linear-gradient(180deg, rgba(40,7,66,1) 50%, rgba(64,10,100,1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px 0px 0px 0px;
+    height: 70px;
+}
+
+nav 
+{
+    width: 98%;
+    display: flex;
+    justify-content: space-between;
+}
+
+input, select
+{
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(31, 4, 49);
+    color: white;
+    width: 230px;
+}
+
+.search, textarea {font-family: 'IBM Plex Mono', "Lucida Console", monospace; font-style: italic;}
+textarea {max-width: 600px;}
+
+input:focus
+{
+    outline: none;
+}
+
+input::-webkit-input-placeholder 
+{ 
+    color: rgba(255, 255, 255, 0.719);
+    text-indent: 5px
+}
+
+.autorisation
+{
+    color: white;
+    padding: 26px 15px;
+}
+
+.autorisation:hover {background-color: rgba(31, 4, 49, 0.644); transition: 0.5s;}
+
+nav > div:nth-child(2)
+{
+    align-self: center;
+}
+
+.logo {width: 50px;
+       height: 100%;}
+
+.logo > a > img {width: 90px; margin-top: 5px;}
+
+.flexes 
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    background-color: rgba(226, 224, 222, 0.582);}
+
+main
+{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.menu
+{
+    width: 100%;
+}
+
+.main-games, .main-game
+{
+    width: 80%;
+}
+
+.main-game {display: block; min-height: 1000px;}
+
+.main-games {min-height: 1000px; justify-content: flex-start;}
+
+.main-games h1 {padding-top: 10px;}
+
+.main-game > div {padding: 15px; line-height: 1.6;}
+
+#eDiv2 > p {text-indent: 11px;}
+
+#eDiv2 {padding: 5px; word-break: break-word;}
+
+div[contenteditable='true'] {
+    background: rgba(99, 99, 99, 0.726);
+    border-radius: 7px;
+}
+
+aside
+{
+    width: 20%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
+
+.consoles-block
+{
+    margin-top: 5px;
+    background: black;
+    color: white;
+    text-align: center;
+    position: fixed;
+}
+
+.consoles-block h2 {padding-top: 5px;}
+
+.add_screen {color: rgb(22, 22, 235);}
+
+ul {list-style-type: none; padding: 15px 0px}
+
+li {text-indent: 10px; margin: 15px 0px;}
+
+li a {color: white;}
+
+.info {text-align: center;}
+
+.info h1, .info h3, .info p{padding-bottom: 15px;}
+
+#consoles, #games
+{ 
+    
+    padding-top: 30px;
+    padding-bottom: 10px;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: auto auto auto;
+    grid-gap: 10px;    
+}
+
+.console, .game
+{
+    margin: 0px 18px;
+    text-align: center;
+}
+
+.game {margin-bottom: 17px; max-width: 268px;}
+
+.image > a > img {width: 239px; height: 239px;} 
+
+.image 
+{
+    border-radius: 10px; 
+    background-color:  rgba(226, 224, 222, 0.35); 
+}
+
+.nes-famicom, .sega-genesis, .sega-saturn {width: 239px; height: 330px;}
+.gb, .gbc, .gba, .n64, .snes, .dreamcast, .search-res {width: 239px; height: 250px;}
+
+.image 
+{ 
+    background-color:  rgba(226, 224, 222, 0.35); 
+}
+
+.console-name, .game-name
+{
+    margin: 5px 0px;
+    padding: 5px 0px;
+    font-weight: bold; 
+    border-radius: 10px;
+    background-color: rgba(226, 224, 222, 0.35); 
+}
+
+.game-info:hover .console-name, .game-info:hover .image, .game-info:hover .game-name, .delete-game:hover
+{
+    background-color:  rgba(199, 199, 199, 0.87);
+    transition: 0.4s;
+}
+
+.console:hover .image img, .game:hover .image img, .image-game > a > img:hover {
+    -webkit-filter: brightness(70%);
+    transition: 0.4s;
+}
+
+.console a, .game a {color: black;}
+.delete-game a {color:rgb(158, 9, 9);}
+
+
+
+.delete-game
+{
+    background-color: rgba(226, 224, 222, 0.35); 
+    border-radius: 10px;
+    padding: 5px 0px;  
+}
+
+hr 
+{
+    border: 0;
+    border-bottom: 1px solid #000;
+    background: #000;
+}
+
+.prim_info 
+{
+    display: flex; 
+    margin-top: 10px;
+    flex-direction: row-reverse;
+}
+
+.table 
+{
+    display: table;
+    min-width: 200px;
+    max-width: 300px;
+    width: 100%;
+    border: 1px solid rgb(61, 64, 73);
+    background-color:  rgba(226, 224, 222, 0.35);
+    text-align: center;
+    padding: 5px;
+}
+
+#eDiv2 {margin: 0px 10px; width: 100%;}
+
+.cover_art img {width: 100%; min-width: 180px;}
+.cover_text > div 
+{   
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+    margin-right: 10px;
+}
+.text_name {padding-left: 6px; margin: auto 0;}
+
+.text_name ul {padding: 0px;}
+.text_name ul li {text-indent: 0px; margin: 0px;}
+.cover_name {margin-bottom: 5px;}
+#gallery 
+{ 
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 200px));
+    grid-gap: 10px;
+    justify-content: center;
+}
+
+#gallery > div 
+{
+    padding: 10px;
+    border: 1px solid rgb(61, 64, 73);
+    border-radius: 5px;
+    background-color:  rgba(226, 224, 222, 0.35); 
+}
+
+.pic-game {text-align: center;}
+
+.pic-game img {width: 175px; height: 131px;}
+
+footer
+{
+    background: linear-gradient(180deg, rgba(18,28,80,1) 16%, rgba(2,2,60,1) 75%);
+    padding: 20px 15px;
+    color: rgb(191, 201, 224);
+}
+
+#autoris, #registr
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.aut_content, .reg_content
+{
+    max-width: 650px;
+    width:100%;
+    min-height: 200px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(66, 66, 66);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.aut_content input:hover, .reg_content input:hover
+{
+    background-color: rgba(97, 97, 97, 0.925);
+    transition: 0.4s;
+}
+
+.aut_content input, .reg_content input, select
+{
+    margin: 10px 0px; 
+    background-color:rgba(129, 129, 129, 0.884);
+    max-width: 335px;
+    width: 100%;
+    height: 40px;
+    font-size: 22px;
+    text-indent: 7px;
+}
+
+.reg_content b {color: rgb(140, 17, 31);}
+.reg_content ul, .aut_content ul {background-color: rgb(155, 165, 191);}
+.reg_content ul li {margin:0px; text-align:center;}
+.aut_content p {margin: 15px 0px;}
+
+.game_page {margin-top: 15px;}
+.reg_aut {margin: 15px 0px;}
+
+input[type='file'] {background-color: rgb(255, 255, 255); color: black; font-size: 15px;}
+input[type='file']:hover {background-color: rgb(255, 255, 255);}
+
+.aut_content input[type='submit'], .reg_content input[type='submit'] 
+{
+    max-width: 175px; 
+    font-size: 15px;
+    text-indent: 0px;
+}
+
+.message {margin-top: 45px; padding: 10px 0px;}
+
+@media all and (max-width: 650px)
+{
+    #autoris, #registr {display: block;}
+
+    .aut_content, .reg_content 
+    {
+        border-radius: 0px; 
+        border: none; 
+        min-height: 100%;
+    }
+}
+
+@media all and (max-width: 1100px)
+{
+    #consoles, #games
+    {
+        grid-template-rows: auto auto;
+        grid-template-columns: auto auto;
+    }
+
+   
+    .main-games, .main-game, aside {width:100%;}
+
+    .consoles-block 
+    {
+     border-radius: 0px; 
+     margin: 0px; 
+     position: relative;
+    }
+}
+
+@media all and (max-width: 550px)
+{
+    #consoles, #games
+    {
+        grid-template-rows: auto;
+        grid-template-columns: auto;
+    }
+
+    input {width: 130px}
+
+    .logo > a > img {width: 65px; margin-top: 5px;}
+
+    .prim_info {display: block;}
+    .table 
+    {
+        margin: 0 auto; 
+        font-size: 5vw;
+        min-width: 0px;
+    }
+    .cover_art img{min-width: 0px;}
+    #eDiv2 {margin: 10px 0px;}
+    .console_game {text-align: center;}
+    .text_name {padding-left: 15px;}
+}
